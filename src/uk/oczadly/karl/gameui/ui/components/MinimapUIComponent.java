@@ -8,8 +8,10 @@ import uk.oczadly.karl.gameui.ui.VerticalAlignment;
 
 public class MinimapUIComponent extends UIComponent {
     
-    public MinimapUIComponent() {
-        super(80,80, HorizontalAlignment.RIGHT_MONITOR, -8, VerticalAlignment.TOP_MONITOR, 8);
+    public MinimapUIComponent(int size, HorizontalAlignment horizontalAlignment, int horizontalOffset,
+                              VerticalAlignment verticalAlignment, int verticalOffset) {
+        super(size, size, horizontalAlignment, horizontalOffset,
+                verticalAlignment, verticalOffset);
     }
     
     

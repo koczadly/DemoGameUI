@@ -11,11 +11,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import uk.oczadly.karl.gameui.ui.*;
+import uk.oczadly.karl.gameui.ui.UIComponent;
+import uk.oczadly.karl.gameui.ui.UIManager;
 import uk.oczadly.karl.gameui.ui.components.HotbarUIComponent;
 import uk.oczadly.karl.gameui.ui.components.InventoryUIComponent;
 import uk.oczadly.karl.gameui.ui.components.MinimapUIComponent;
-import uk.oczadly.karl.gameui.ui.components.ScaledMinimapUIComponent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,9 +93,12 @@ public class Main extends Application {
         List<UIComponent> components = new ArrayList<>();
     
         if (controller.checkUiMinimap.isSelected())
-            components.add(new MinimapUIComponent());
-        if (controller.checkUiMinimapScaled.isSelected())
-            components.add(new ScaledMinimapUIComponent());
+            components.add(new MinimapUIComponent(
+                    Integer.parseInt(controller.minimapSize.getText()),
+                    controller.choiceHorizontal.getValue(),
+                    Integer.parseInt(controller.horizontalOffset.getText()),
+                    controller.choiceVertical.getValue(),
+                    Integer.parseInt(controller.verticalOffset.getText())));
         if (controller.checkUiHotbar.isSelected())
             components.add(new HotbarUIComponent());
         if (controller.checkUiInventory.isSelected())

@@ -5,8 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="148.0" maxWidth="265.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="137.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="227.0" maxWidth="265.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="6.0" layoutY="6.0" text="GUI scale:">
          <font>
@@ -32,6 +31,18 @@
       <CheckBox fx:id="checkUiHotbar" layoutX="128.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="UI Hotbar" />
       <CheckBox fx:id="checkUiMinimap" layoutX="128.0" layoutY="97.0" mnemonicParsing="false" selected="true" text="UI Minimap" />
       <CheckBox fx:id="checkUiInventory" layoutX="6.0" layoutY="97.0" mnemonicParsing="false" selected="true" text="UI Inventory" />
-      <CheckBox fx:id="checkUiMinimapScaled" layoutX="6.0" layoutY="114.0" mnemonicParsing="false" text="UI Minimap (using scaled bounds)" />
+      <TextField fx:id="minimapSize" layoutX="31.0" layoutY="142.0" prefHeight="25.0" prefWidth="33.0" text="80" />
+      <Label layoutX="6.0" layoutY="125.0" text="Minimap settings:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="145.0" text="Size" />
+      <Label layoutX="7.0" layoutY="167.0" text="Horizontal" />
+      <ChoiceBox fx:id="choiceHorizontal" layoutX="70.0" layoutY="163.0" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="horizontalOffset" layoutX="205.0" layoutY="163.0" prefHeight="25.0" prefWidth="33.0" text="-8" />
+      <TextField fx:id="verticalOffset" layoutX="205.0" layoutY="192.0" prefHeight="25.0" prefWidth="33.0" text="8" />
+      <ChoiceBox fx:id="choiceVertical" layoutX="70.0" layoutY="192.0" prefHeight="25.0" prefWidth="130.0" />
+      <Label layoutX="7.0" layoutY="196.0" text="Vertical" />
    </children>
 </Pane>
