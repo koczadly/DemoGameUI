@@ -75,6 +75,8 @@ public class Main extends Application {
         // Scaled window boundaries
         if (controller.checkScaleBox.isSelected()) {
             graphics.setStroke(Color.GRAY);
+            graphics.setLineWidth(2);
+            graphics.setLineDashes(5);
             graphics.strokeRect((width - ui.getScaledWidth()) / 2d, (height - ui.getScaledHeight()) / 2d,
                     ui.getScaledWidth(), ui.getScaledHeight());
         }

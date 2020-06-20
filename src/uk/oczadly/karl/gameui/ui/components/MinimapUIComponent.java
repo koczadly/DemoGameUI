@@ -15,8 +15,8 @@ public class MinimapUIComponent extends UIComponent {
     
     @Override
     protected void draw(GraphicsContext graphics, int x, int y, int scaleFactor) {
-        graphics.setStroke(Color.AQUA);
-        graphics.strokeOval(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor);
+        graphics.setFill(Color.AQUA);
+        graphics.fillOval(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor);
     }
     
 }

@@ -15,8 +15,8 @@ public class HotbarUIComponent extends UIComponent {
     
     @Override
     protected void draw(GraphicsContext graphics, int x, int y, int scaleFactor) {
-        graphics.setStroke(Color.LIGHTGREEN);
-        graphics.strokeRoundRect(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor,
+        graphics.setFill(Color.LIGHTGREEN);
+        graphics.fillRoundRect(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor,
                 4 * scaleFactor, 4 * scaleFactor);
     }
     

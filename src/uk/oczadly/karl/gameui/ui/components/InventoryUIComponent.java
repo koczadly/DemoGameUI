@@ -15,8 +15,8 @@ public class InventoryUIComponent extends UIComponent {
     
     @Override
     protected void draw(GraphicsContext graphics, int x, int y, int scaleFactor) {
-        graphics.setStroke(Color.YELLOW);
-        graphics.strokeRoundRect(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor,
+        graphics.setFill(Color.YELLOW);
+        graphics.fillRoundRect(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor,
                 7 * scaleFactor, 7 * scaleFactor);
     }
     

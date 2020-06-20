@@ -15,8 +15,8 @@ public class ScaledMinimapUIComponent extends UIComponent {
     
     @Override
     protected void draw(GraphicsContext graphics, int x, int y, int scaleFactor) {
-        graphics.setStroke(Color.MAGENTA);
-        graphics.strokeOval(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor);
+        graphics.setFill(Color.MAGENTA);
+        graphics.fillOval(x, y, getWidth() * scaleFactor, getHeight() * scaleFactor);
     }
     
 }
