@@ -2,10 +2,6 @@ package uk.oczadly.karl.gameui.ui;
 
 import javafx.scene.canvas.GraphicsContext;
 
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class UIComponent {
     
     private int width, height, horOffset, vertOffset;
@@ -37,7 +33,7 @@ public abstract class UIComponent {
             case LEFT_UI:
                 x = ((ui.getScreenWidth() - ui.getScaledWidth()) / 2);
                 break;
-            case RIGHT_MONITOR:
+            case RIGHT_WINDOW:
                 x = ui.getScreenWidth() - (width * sf);
                 break;
             case RIGHT_UI:
@@ -51,7 +47,7 @@ public abstract class UIComponent {
             case TOP_UI:
                 y = ((ui.getScreenHeight() - ui.getScaledHeight()) / 2);
                 break;
-            case BOTTOM_MONITOR:
+            case BOTTOM_WINDOW:
                 y = ui.getScreenHeight() - (height * sf);
                 break;
             case BOTTOM_UI:

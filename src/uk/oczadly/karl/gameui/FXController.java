@@ -46,9 +46,9 @@ public class FXController implements Initializable {
         checkUiMinimap.selectedProperty().addListener(e -> Main.updateUiComponents());
     
         choiceHorizontal.setItems(FXCollections.observableArrayList(HorizontalAlignment.values()));
-        choiceHorizontal.setValue(HorizontalAlignment.RIGHT_MONITOR);
+        choiceHorizontal.setValue(HorizontalAlignment.RIGHT_WINDOW);
         choiceVertical.setItems(FXCollections.observableArrayList(VerticalAlignment.values()));
-        choiceVertical.setValue(VerticalAlignment.TOP_MONITOR);
+        choiceVertical.setValue(VerticalAlignment.TOP_WINDOW);
         
         minimapSize.textProperty().addListener(e -> Main.updateUiComponents());
         horizontalOffset.textProperty().addListener(e -> Main.updateUiComponents());

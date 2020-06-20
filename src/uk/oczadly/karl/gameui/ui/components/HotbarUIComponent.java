@@ -9,7 +9,7 @@ import uk.oczadly.karl.gameui.ui.VerticalAlignment;
 public class HotbarUIComponent extends UIComponent {
     
     public HotbarUIComponent() {
-        super(200,20, HorizontalAlignment.CENTER, 0, VerticalAlignment.BOTTOM_MONITOR, -4);
+        super(180,20, HorizontalAlignment.CENTER, 0, VerticalAlignment.BOTTOM_WINDOW, 0);
     }
     
     
