@@ -9,7 +9,7 @@ import uk.oczadly.karl.gameui.ui.VerticalAlignment;
 public class InventoryUIComponent extends UIComponent {
     
     public InventoryUIComponent() {
-        super(180,160, HorizontalAlignment.CENTER, 0, VerticalAlignment.CENTER, 0);
+        super(180,160, HorizontalAlignment.CENTER, 0, VerticalAlignment.CENTER, -10);
     }
     
     
