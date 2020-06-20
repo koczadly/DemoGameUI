@@ -63,8 +63,10 @@ public class Main extends Application {
                 Integer.parseInt(controller.resHeight.getText()));
         ui.calculate(width, height);
         
-        controller.guiScaleLabel.setText(Integer.toString(ui.getScaleFactor()));
-        controller.resLabel.setText(width + " x " + height + "\n" + ui.getScaledWidth() + " x " + ui.getScaledHeight());
+        Platform.runLater(() -> {
+            controller.guiScaleLabel.setText(Integer.toString(ui.getScaleFactor()));
+            controller.resLabel.setText(width + " x " + height + "\n" + ui.getScaledWidth() + " x " + ui.getScaledHeight());
+        });
         
         canvas.setWidth(width + 5);
         canvas.setHeight(height + 5);
