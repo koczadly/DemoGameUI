@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="148.0" maxWidth="265.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="137.0" prefWidth="243.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="6.0" layoutY="6.0" text="GUI scale:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="36.0" text="Ideal res:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="resWidth" layoutX="74.0" layoutY="32.0" prefHeight="25.0" prefWidth="39.0" text="320" />
+      <TextField fx:id="resHeight" layoutX="117.0" layoutY="32.0" prefHeight="25.0" prefWidth="39.0" text="240" />
+      <TextField fx:id="idealGui" layoutX="74.0" layoutY="2.0" prefHeight="25.0" prefWidth="39.0" text="0" />
+      <Label layoutX="6.0" layoutY="63.0" text="Display:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="guiScaleLabel" alignment="CENTER_RIGHT" layoutX="163.0" layoutY="6.0" prefHeight="17.0" prefWidth="72.0" text="1" textAlignment="RIGHT" />
+      <Label fx:id="resLabel" alignment="CENTER_RIGHT" layoutX="165.0" layoutY="32.0" prefHeight="34.0" prefWidth="72.0" text="1920 x 1080&#10;1920 x 1080" textAlignment="RIGHT" />
+      <CheckBox fx:id="checkScaleBox" layoutX="6.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="Scaled UI bounds" />
+      <CheckBox fx:id="checkUiHotbar" layoutX="128.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="UI Hotbar" />
+      <CheckBox fx:id="checkUiMinimap" layoutX="128.0" layoutY="97.0" mnemonicParsing="false" selected="true" text="UI Minimap" />
+      <CheckBox fx:id="checkUiInventory" layoutX="6.0" layoutY="97.0" mnemonicParsing="false" selected="true" text="UI Inventory" />
+      <CheckBox fx:id="checkUiMinimapScaled" layoutX="6.0" layoutY="114.0" mnemonicParsing="false" text="UI Minimap (using scaled bounds)" />
+   </children>
+</Pane>
