@@ -24,6 +24,7 @@ public class UIManager {
         this.scaledHeight = scaleFactor * nativeHeight;
     }
     
+    
     public List<UIComponent> getUIComponents() {
         return uiComponents;
     }

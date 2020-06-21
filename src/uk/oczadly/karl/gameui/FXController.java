@@ -36,25 +36,25 @@ public class FXController implements Initializable {
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        idealGui.textProperty().addListener(e -> Main.draw());
-        resWidth.textProperty().addListener(e -> Main.draw());
-        resHeight.textProperty().addListener(e -> Main.draw());
+        idealGui.textProperty().addListener(e -> Main.updateUISettings());
+        resWidth.textProperty().addListener(e -> Main.updateUISettings());
+        resHeight.textProperty().addListener(e -> Main.updateUISettings());
         
-        checkScaleBox.selectedProperty().addListener(e -> Main.updateUiComponents());
-        checkUiHotbar.selectedProperty().addListener(e -> Main.updateUiComponents());
-        checkUiInventory.selectedProperty().addListener(e -> Main.updateUiComponents());
-        checkUiMinimap.selectedProperty().addListener(e -> Main.updateUiComponents());
+        checkScaleBox.selectedProperty().addListener(e -> Main.updateUISettings());
+        checkUiHotbar.selectedProperty().addListener(e -> Main.updateUISettings());
+        checkUiInventory.selectedProperty().addListener(e -> Main.updateUISettings());
+        checkUiMinimap.selectedProperty().addListener(e -> Main.updateUISettings());
     
         choiceHorizontal.setItems(FXCollections.observableArrayList(HorizontalAlignment.values()));
         choiceHorizontal.setValue(HorizontalAlignment.RIGHT_WINDOW);
         choiceVertical.setItems(FXCollections.observableArrayList(VerticalAlignment.values()));
         choiceVertical.setValue(VerticalAlignment.TOP_WINDOW);
         
-        minimapSize.textProperty().addListener(e -> Main.updateUiComponents());
-        horizontalOffset.textProperty().addListener(e -> Main.updateUiComponents());
-        choiceHorizontal.valueProperty().addListener(e -> Main.updateUiComponents());
-        verticalOffset.textProperty().addListener(e -> Main.updateUiComponents());
-        choiceVertical.valueProperty().addListener(e -> Main.updateUiComponents());
+        minimapSize.textProperty().addListener(e -> Main.updateUISettings());
+        horizontalOffset.textProperty().addListener(e -> Main.updateUISettings());
+        choiceHorizontal.valueProperty().addListener(e -> Main.updateUISettings());
+        verticalOffset.textProperty().addListener(e -> Main.updateUISettings());
+        choiceVertical.valueProperty().addListener(e -> Main.updateUISettings());
     }
     
 }

@@ -22,10 +22,10 @@ import java.util.List;
 
 public class Main extends Application {
     
-    private static UIManager ui = new UIManager();
-    private static FXController controller;
-    private static Scene scene;
-    private static Canvas canvas;
+    static UIManager ui = new UIManager();
+    static FXController controller;
+    static Scene scene;
+    static Canvas canvas;
     
     @Override
     public void start(Stage uiStage) throws Exception {
@@ -51,16 +51,12 @@ public class Main extends Application {
         scene.widthProperty().addListener((obs, oldVal, newVal) -> draw());
         scene.heightProperty().addListener((obs, oldVal, newVal) -> draw());
         
-        updateUiComponents();
+        updateUISettings();
     }
     
     public static void draw() {
         int width = (int)scene.getWidth(), height = (int)scene.getHeight();
         
-        ui.setConfigs(
-                Integer.parseInt(controller.idealGui.getText()),
-                Integer.parseInt(controller.resWidth.getText()),
-                Integer.parseInt(controller.resHeight.getText()));
         ui.calculate(width, height);
         
         Platform.runLater(() -> {
@@ -84,14 +80,16 @@ public class Main extends Application {
         }
         
         // UI components
-        for (UIComponent component : ui.getUIComponents()) {
-            component.draw(graphics, ui);
-        }
+        ui.getUIComponents().forEach(e -> e.draw(graphics, ui));
     }
     
-    public static void updateUiComponents() {
+    public static void updateUISettings() {
+        ui.setConfigs(
+                Integer.parseInt(controller.idealGui.getText()),
+                Integer.parseInt(controller.resWidth.getText()),
+                Integer.parseInt(controller.resHeight.getText()));
+        
         List<UIComponent> components = new ArrayList<>();
-    
         if (controller.checkUiMinimap.isSelected())
             components.add(new MinimapUIComponent(
                     Integer.parseInt(controller.minimapSize.getText()),
@@ -103,13 +101,14 @@ public class Main extends Application {
             components.add(new HotbarUIComponent());
         if (controller.checkUiInventory.isSelected())
             components.add(new InventoryUIComponent());
-        
         ui.setUIComponents(components);
+        
         draw();
     }
-
-
+    
+    
     public static void main(String[] args) {
         launch(args);
     }
+    
 }
