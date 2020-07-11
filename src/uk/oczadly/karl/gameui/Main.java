@@ -90,17 +90,18 @@ public class Main extends Application {
                 Integer.parseInt(controller.resHeight.getText()));
         
         List<UIComponent> components = new ArrayList<>();
-        if (controller.checkUiMinimap.isSelected())
-            components.add(new MinimapUIComponent(
-                    Integer.parseInt(controller.minimapSize.getText()),
-                    controller.choiceHorizontal.getValue(),
-                    Integer.parseInt(controller.horizontalOffset.getText()),
-                    controller.choiceVertical.getValue(),
-                    Integer.parseInt(controller.verticalOffset.getText())));
         if (controller.checkUiHotbar.isSelected())
             components.add(new HotbarUIComponent());
         if (controller.checkUiInventory.isSelected())
             components.add(new InventoryUIComponent());
+        if (controller.checkUiMinimap.isSelected())
+            components.add(new MinimapUIComponent(
+                    Integer.parseInt(controller.minimapSize.getText()),
+                    controller.choiceHorizontal.getValue()
+                            .getAlignment(Integer.parseInt(controller.horizontalOffset.getText())),
+                    controller.choiceVertical.getValue()
+                            .getAlignment(Integer.parseInt(controller.verticalOffset.getText()))
+            ));
         ui.setUIComponents(components);
         
         draw();

@@ -7,8 +7,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import uk.oczadly.karl.gameui.ui.HorizontalAlignment;
-import uk.oczadly.karl.gameui.ui.VerticalAlignment;
+import uk.oczadly.karl.gameui.ui.alignment.UIAlignment;
+import uk.oczadly.karl.gameui.ui.alignment.horizontal.*;
+import uk.oczadly.karl.gameui.ui.alignment.vertical.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -55,6 +56,77 @@ public class FXController implements Initializable {
         choiceHorizontal.valueProperty().addListener(e -> Main.updateUISettings());
         verticalOffset.textProperty().addListener(e -> Main.updateUISettings());
         choiceVertical.valueProperty().addListener(e -> Main.updateUISettings());
+    }
+    
+    
+    public enum VerticalAlignment {
+        CENTER {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new VertAlignCenter(offset);
+            }
+        },
+        TOP_UI {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new VertAlignTopUI(offset);
+            }
+        },
+        TOP_WINDOW {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new VertAlignTopWindow(offset);
+            }
+        },
+        BOTTOM_UI {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new VertAlignBottomUI(offset);
+            }
+        },
+        BOTTOM_WINDOW {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new VertAlignBottomWindow(offset);
+            }
+        };
+        
+        public abstract UIAlignment getAlignment(int offset);
+    }
+    
+    public enum HorizontalAlignment {
+        CENTER {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new HorizAlignCenter(offset);
+            }
+        },
+        LEFT_UI {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new HorizAlignLeftUI(offset);
+            }
+        },
+        LEFT_WINDOW {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new HorizAlignLeftWindow(offset);
+            }
+        },
+        RIGHT_UI {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new HorizAlignRightUI(offset);
+            }
+        },
+        RIGHT_WINDOW {
+            @Override
+            public UIAlignment getAlignment(int offset) {
+                return new HorizAlignRightWindow(offset);
+            }
+        };
+    
+        public abstract UIAlignment getAlignment(int offset);
     }
     
 }

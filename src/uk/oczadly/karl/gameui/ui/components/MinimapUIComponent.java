@@ -2,16 +2,13 @@ package uk.oczadly.karl.gameui.ui.components;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import uk.oczadly.karl.gameui.ui.HorizontalAlignment;
 import uk.oczadly.karl.gameui.ui.UIComponent;
-import uk.oczadly.karl.gameui.ui.VerticalAlignment;
+import uk.oczadly.karl.gameui.ui.alignment.UIAlignment;
 
 public class MinimapUIComponent extends UIComponent {
     
-    public MinimapUIComponent(int size, HorizontalAlignment horizontalAlignment, int horizontalOffset,
-                              VerticalAlignment verticalAlignment, int verticalOffset) {
-        super(size, size, horizontalAlignment, horizontalOffset,
-                verticalAlignment, verticalOffset);
+    public MinimapUIComponent(int size, UIAlignment horizAlignment, UIAlignment vertAlignment) {
+        super(size, size, horizAlignment, vertAlignment);
     }
     
     
