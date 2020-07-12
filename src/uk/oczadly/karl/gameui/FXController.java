@@ -27,12 +27,14 @@ public class FXController implements Initializable {
     @FXML public CheckBox checkUiHotbar;
     @FXML public CheckBox checkUiInventory;
     @FXML public CheckBox checkUiMinimap;
+    @FXML public CheckBox checkUiTestBox;
     
-    @FXML public TextField minimapSize;
-    @FXML public TextField horizontalOffset;
-    @FXML public ChoiceBox<HorizontalAlignment> choiceHorizontal;
-    @FXML public TextField verticalOffset;
-    @FXML public ChoiceBox<VerticalAlignment> choiceVertical;
+    @FXML public TextField testBoxWidth;
+    @FXML public TextField testBoxHeight;
+    @FXML public TextField testBoxHorizontalOffset;
+    @FXML public ChoiceBox<HorizontalAlignment> testBoxHorizontal;
+    @FXML public TextField testBoxVerticalOffset;
+    @FXML public ChoiceBox<VerticalAlignment> testBoxVertical;
     
     
     @Override
@@ -45,17 +47,19 @@ public class FXController implements Initializable {
         checkUiHotbar.selectedProperty().addListener(e -> Main.updateUISettings());
         checkUiInventory.selectedProperty().addListener(e -> Main.updateUISettings());
         checkUiMinimap.selectedProperty().addListener(e -> Main.updateUISettings());
+        checkUiTestBox.selectedProperty().addListener(e -> Main.updateUISettings());
     
-        choiceHorizontal.setItems(FXCollections.observableArrayList(HorizontalAlignment.values()));
-        choiceHorizontal.setValue(HorizontalAlignment.RIGHT_WINDOW);
-        choiceVertical.setItems(FXCollections.observableArrayList(VerticalAlignment.values()));
-        choiceVertical.setValue(VerticalAlignment.TOP_WINDOW);
-        
-        minimapSize.textProperty().addListener(e -> Main.updateUISettings());
-        horizontalOffset.textProperty().addListener(e -> Main.updateUISettings());
-        choiceHorizontal.valueProperty().addListener(e -> Main.updateUISettings());
-        verticalOffset.textProperty().addListener(e -> Main.updateUISettings());
-        choiceVertical.valueProperty().addListener(e -> Main.updateUISettings());
+        testBoxHorizontal.setItems(FXCollections.observableArrayList(HorizontalAlignment.values()));
+        testBoxHorizontal.setValue(HorizontalAlignment.CENTER);
+        testBoxVertical.setItems(FXCollections.observableArrayList(VerticalAlignment.values()));
+        testBoxVertical.setValue(VerticalAlignment.CENTER);
+    
+        testBoxWidth.textProperty().addListener(e -> Main.updateUISettings());
+        testBoxHeight.textProperty().addListener(e -> Main.updateUISettings());
+        testBoxHorizontalOffset.textProperty().addListener(e -> Main.updateUISettings());
+        testBoxHorizontal.valueProperty().addListener(e -> Main.updateUISettings());
+        testBoxVerticalOffset.textProperty().addListener(e -> Main.updateUISettings());
+        testBoxVertical.valueProperty().addListener(e -> Main.updateUISettings());
     }
     
     

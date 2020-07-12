@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import uk.oczadly.karl.gameui.ui.UIComponent;
 import uk.oczadly.karl.gameui.ui.UIManager;
+import uk.oczadly.karl.gameui.ui.components.BoxUIComponent;
 import uk.oczadly.karl.gameui.ui.components.HotbarUIComponent;
 import uk.oczadly.karl.gameui.ui.components.InventoryUIComponent;
 import uk.oczadly.karl.gameui.ui.components.MinimapUIComponent;
@@ -95,12 +96,15 @@ public class Main extends Application {
         if (controller.checkUiInventory.isSelected())
             components.add(new InventoryUIComponent());
         if (controller.checkUiMinimap.isSelected())
-            components.add(new MinimapUIComponent(
-                    Integer.parseInt(controller.minimapSize.getText()),
-                    controller.choiceHorizontal.getValue()
-                            .getAlignment(Integer.parseInt(controller.horizontalOffset.getText())),
-                    controller.choiceVertical.getValue()
-                            .getAlignment(Integer.parseInt(controller.verticalOffset.getText()))
+            components.add(new MinimapUIComponent());
+        if (controller.checkUiTestBox.isSelected())
+            components.add(new BoxUIComponent(
+                    Integer.parseInt(controller.testBoxWidth.getText()),
+                    Integer.parseInt(controller.testBoxHeight.getText()),
+                    controller.testBoxHorizontal.getValue()
+                            .getAlignment(Integer.parseInt(controller.testBoxHorizontalOffset.getText())),
+                    controller.testBoxVertical.getValue()
+                            .getAlignment(Integer.parseInt(controller.testBoxVerticalOffset.getText()))
             ));
         ui.setUIComponents(components);
         

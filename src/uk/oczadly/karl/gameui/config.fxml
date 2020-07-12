@@ -31,18 +31,29 @@
       <CheckBox fx:id="checkUiHotbar" layoutX="128.0" layoutY="80.0" mnemonicParsing="false" selected="true" text="UI Hotbar" />
       <CheckBox fx:id="checkUiMinimap" layoutX="128.0" layoutY="97.0" mnemonicParsing="false" selected="true" text="UI Minimap" />
       <CheckBox fx:id="checkUiInventory" layoutX="6.0" layoutY="97.0" mnemonicParsing="false" selected="true" text="UI Inventory" />
-      <TextField fx:id="minimapSize" layoutX="31.0" layoutY="142.0" prefHeight="25.0" prefWidth="33.0" text="80" />
-      <Label layoutX="6.0" layoutY="125.0" text="Minimap settings:">
+      <TextField fx:id="testBoxWidth" layoutX="69.0" layoutY="143.0" prefHeight="25.0" prefWidth="39.0" text="100" />
+      <Label layoutX="6.0" layoutY="122.0" text="Test box settings:" underline="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="7.0" layoutY="145.0" text="Size" />
-      <Label layoutX="7.0" layoutY="167.0" text="Horizontal" />
-      <ChoiceBox fx:id="choiceHorizontal" layoutX="70.0" layoutY="163.0" prefHeight="25.0" prefWidth="130.0" />
-      <TextField fx:id="horizontalOffset" layoutX="205.0" layoutY="163.0" prefHeight="25.0" prefWidth="33.0" text="-8" />
-      <TextField fx:id="verticalOffset" layoutX="205.0" layoutY="192.0" prefHeight="25.0" prefWidth="33.0" text="8" />
-      <ChoiceBox fx:id="choiceVertical" layoutX="70.0" layoutY="192.0" prefHeight="25.0" prefWidth="130.0" />
-      <Label layoutX="7.0" layoutY="196.0" text="Vertical" />
+      <Label layoutX="7.0" layoutY="147.0" text="Size">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="6.0" layoutY="175.0" text="Horizontal">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ChoiceBox fx:id="testBoxHorizontal" layoutX="69.0" layoutY="171.0" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="testBoxHorizontalOffset" layoutX="204.0" layoutY="171.0" prefHeight="25.0" prefWidth="33.0" text="0" />
+      <TextField fx:id="testBoxVerticalOffset" layoutX="204.0" layoutY="198.0" prefHeight="25.0" prefWidth="33.0" text="0" />
+      <ChoiceBox fx:id="testBoxVertical" layoutX="69.0" layoutY="198.0" prefHeight="25.0" prefWidth="130.0" />
+      <Label layoutX="6.0" layoutY="202.0" text="Vertical">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <CheckBox fx:id="checkUiTestBox" layoutX="128.0" layoutY="122.0" mnemonicParsing="false" text="Test box" />
+      <TextField fx:id="testBoxHeight" layoutX="111.0" layoutY="143.0" prefHeight="25.0" prefWidth="39.0" text="100" />
    </children>
 </Pane>
